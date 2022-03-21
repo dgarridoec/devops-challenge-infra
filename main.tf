@@ -11,7 +11,7 @@ provider "google-beta" {
 
 data "google_cloud_run_locations" "available" { }
 
-resource "google_cloud_run_service" "default" {
+resource "google_cloud_run_service" "available" {
   for_each = toset(data.google_cloud_run_locations.default.locations)
 
   name     = "${var.name}--${each.value}"
