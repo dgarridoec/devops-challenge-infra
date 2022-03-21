@@ -1,9 +1,11 @@
 provider "google" {
+  credentials = "../sa/terraform-dev.json"
   project = var.project_id
 }
 
 provider "google-beta" {
   #alias       = "dev" 
+  credentials = "../sa/terraform-dev.json"
   project     = var.project_id
 }
 
