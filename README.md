@@ -30,7 +30,9 @@ gcloud projects add-iam-policy-binding $PROJECT_NAME \
 gcloud iam service-accounts keys create $(pwd)/terraform/service-account-key.json \
 --iam-account cicd-service-account@$PROJECT_NAME.iam.gserviceaccount.com
 
-### IInicializar dependecias de terraform
+### Inicializar dependecias de terraform
 terraform init
+
 terraform plan
+
 terraform apply
