@@ -1,11 +1,11 @@
 provider "google" {
-  credentials = "/home/dave/.config/gcloud/application_default_credentials.json"
+  credentials = var.credential
   project = var.project_id
 }
 
 provider "google-beta" {
   #alias       = "dev" 
-  credentials = "/home/dave/.config/gcloud/application_default_credentials.json"
+  credentials = var.credential
   project     = var.project_id
 }
 
