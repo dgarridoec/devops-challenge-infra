@@ -2,6 +2,11 @@ provider "google" {
   project = var.project_id
 }
 
+provider "google-beta" {
+  #alias       = "dev" 
+  project     = var.project_id
+}
+
 data "google_cloud_run_locations" "default" { }
 
 resource "google_cloud_run_service" "default" {
