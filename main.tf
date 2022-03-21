@@ -9,9 +9,9 @@ provider "google-beta" {
   project     = var.project_id
 }
 
-data "google_cloud_run_locations" "available" { }
+data "google_cloud_run_locations" "default" { }
 
-resource "google_cloud_run_service" "available" {
+resource "google_cloud_run_service" "default" {
   for_each = toset(data.google_cloud_run_locations.default.locations)
 
   name     = "${var.name}--${each.value}"
