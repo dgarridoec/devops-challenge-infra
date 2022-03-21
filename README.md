@@ -5,7 +5,7 @@ Prerequisitos
 
 gcloud auth login
 PROJECT_NAME="devops-challenge-344619"
-# crear proyecto gcp (debe tener habilitado facturacion en su cuenta)
+### crear proyecto gcp (debe tener habilitado facturacion en su cuenta)
 gcloud projects create $PROJECT_NAME
 gcloud config set project $PROJECT_NAME
 gcloud config get-value project
@@ -30,7 +30,7 @@ gcloud projects add-iam-policy-binding $PROJECT_NAME \
 gcloud iam service-accounts keys create $(pwd)/terraform/service-account-key.json \
 --iam-account cicd-service-account@$PROJECT_NAME.iam.gserviceaccount.com
 
-# IInicializar dependecias de terraform
+### IInicializar dependecias de terraform
 terraform init
 terraform plan
 terraform apply
