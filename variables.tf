@@ -12,3 +12,9 @@ variable "image" {
   description = "gcr.io/devops-challenge-344619/nttdata-service"
   default     = "gcr.io/devops-challenge-344619/nttdata-service"
 }
+
+
+variable "credential" {
+  description = "Credentials"
+  type        = string
+}
